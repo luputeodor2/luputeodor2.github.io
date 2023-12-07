@@ -12,6 +12,14 @@ yesBtn.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
+  moveNoButton();
+});
+
+noBtn.addEventListener("click", () => {
+  moveNoButton();
+})
+
+moveNoButton = () => {
   const noBtnRect = noBtn.getBoundingClientRect();
   const maxX = window.innerWidth - noBtnRect.width;
   const maxY = window.innerHeight - noBtnRect.height;
@@ -21,4 +29,4 @@ noBtn.addEventListener("mouseover", () => {
 
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
-});
+}
